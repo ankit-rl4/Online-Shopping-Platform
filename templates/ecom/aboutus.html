@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Online Shopping</title>
+
+  <title>Online Shopping</title>
+  <style media="screen">
+    .footer{
+      position: fixed;
+    }
+  </style>
+</head>
+
+<body style="background-color: black;">
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+  <br><br><br>
+<h3 style="text-align:center; color: white;">This Site is created by Group Apex Devs<br>
+Group Members -<br>
+1. Takte Yash Santosh (3254)<br>
+2. Thorat Anjali Ashok (3257)<br>
+3. Shaikh Mehjabin Nasimahmed (3240)<br>
+4. Wankhede Ankit Shrikrishn (3270)<br>
+5. Thorat Anushri Namdev (3258)<br>
+<br>
+
+Basic aim of our project is to develop a website which aims to integrate all 
+trade and commerce activities into a single platform to enable consumers place 
+their order online and it would be delivered to them via their delivery address 
+provided</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  {% include "ecom/footer.html" %}
+</body>
+</html>
